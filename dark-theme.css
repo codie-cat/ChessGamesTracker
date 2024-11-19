@@ -1,0 +1,82 @@
+/* Dark Theme Styles */
+
+.dark-theme .container {
+    background-color: #2c2c2c;
+}
+
+.dark-theme .tab-btn {
+    background-color: #2c2c2c;
+}
+
+.dark-theme .container h1 {
+    color: #e0e0e0;
+    text-shadow: 0 1px 6px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme .game-entry {
+    background-color: #2a2a2a;
+    box-shadow:  5px 5px 10px #1e1e1e,
+             -5px -5px 10px #363636;
+}
+
+.dark-theme .game-entry:hover {
+    background-color: #2c2c2c;
+}
+
+.dark-theme .game-details {
+    color: #b0b0b0;
+}
+
+.dark-theme .game-details .entry-date {
+    color: #888;
+}
+
+.dark-theme .game-result {
+    color: #ddd;
+}
+
+.dark-theme .player-details span {
+    color: #e0e0e0;
+}
+
+.dark-theme .title {
+    background-color: #8b0000;
+}
+
+.dark-theme input, 
+.dark-theme select, 
+.dark-theme textarea {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+.dark-theme .custom-select .select-selected {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+.dark-theme .custom-select .select-items {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+.dark-theme .custom-select .select-items div:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .delete-game-btn {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #ff6b6b;
+}
+
+.dark-theme .delete-game-btn:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+}

@@ -1,0 +1,99 @@
+/*the container must be positioned relative:*/
+      .custom-select {
+        position: relative;
+        font-family: Arial;
+      }
+
+      .custom-select select {
+        display: none; /*hide original SELECT element:*/
+      }
+
+      /*style the arrow inside the select element:*/
+      .select-selected:after {
+        position: absolute;
+        content: "";
+        top: calc(50% - 2px);
+        right: 30px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #333 transparent transparent transparent;
+      }
+
+      /*point the arrow upwards when the select box is open (active):*/
+      .select-selected.select-arrow-active:after {
+        border-color: transparent transparent #333 transparent;
+        right: 30px;
+        top: calc(50% - 8px);
+      }
+
+      /*style the items (options), including the selected item:*/
+      .select-items div {
+        color: #333;
+        padding: 8px 16px;
+        border: 1px solid transparent;
+        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .dark-theme .select-items div {
+        color: #ccc;
+        padding: 8px 16px;
+        border: 1px solid transparent;
+        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .select-items div:last-child {
+        color: #333;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .dark-theme .select-items div:last-child {
+        color: #ccc;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .select-selected {
+        padding: 14px 18px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+      }
+
+      /*style items (options):*/
+      .select-items {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        padding: 14px 18px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        background-color: #fff;
+        margin-top: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.17);
+      }
+
+      /*hide the items when the select box is closed:*/
+      .select-hide {
+        display: none;
+      }
+
+      .select-items div:hover,
+      .same-as-selected {
+        transition: all 0.1s;
+        background-color: rgba(0, 0, 0, 0.1);
+      }

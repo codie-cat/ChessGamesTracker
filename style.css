@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background-image: url("https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/PedroPinhata/php6wV0bn.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  color: #2c2c2c;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 320px;
+  background-image: url("/api/placeholder/900/320");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  border-radius: 16px 16px 0 0;
+  filter: brightness(0.8);
+}
+
+.container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 35px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.tab-buttons button {
+  background-color: #eeeeee;
+  border: 2px solid #ddd;
+  cursor: pointer;
+  padding: 14px 28px;
+  border-radius: 20px;
+  margin: 0 12px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-buttons button.active {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form {
+  display: grid;
+  gap: 20px;
+}
+
+input,
+select,
+button {
+  padding: 14px 18px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.select-selected.select-arrow-active:after {
+  right: 40px;
+}
+
+.inlineForm {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flex {
+  flex-grow: 1;
+}
+
+.titleInput {
+  flex: 0 0 70px;
+  width: 70px;
+  text-align: center;
+}
+
+.ratingInput {
+  flex: 0 0 115px;
+  width: 115px;
+  text-align: center;
+}
+
+.ratingInput::placeholder {
+  text-align: right;
+}
+
+.titleInput::placeholder {
+  text-align: center;
+}
+
+#round, #time {
+  flex: 0 0 100px !important;
+  width: 100px !important;
+}
+
+#searchInput {
+  width: 100%;
+}
